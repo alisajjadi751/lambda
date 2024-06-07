@@ -15,40 +15,15 @@ class Test private constructor(){
 
     fun showLog(){
 
-        val name = "ali sajjadi"
+        val address ="test test2 test3 test4"
 
-        //برگرداندن یک حرف
-        name[3]
+        Log.i("TESTING",address.getWords().toString())
+    }
 
-        //یرگردادن طول نوشته
-        name.length
+    private fun String.getWords():Int{
 
-        //برگردادن اولین و اخرین حرف
-        name.first()
-        name.last()
+        return this.split(' ').size
 
-        //حذف فاصله انتها و ابتدا که بیشتر برای دریافت پسورد به کار میرود
-        name.trim()
-        name.trimStart()
-        name.trimEnd()
-
-        //برعکس کردن رشته
-        val test = name.reversed()
-
-        //بررسی ابتدا . انتهای رشته و بولین برمیگرداند
-        name.startsWith("ali")
-        name.endsWith("sajjadi")
-
-        //چای گذاری
-        val test2 = name.replace('a','*')
-
-        //چک کردن وجود یک رشته در رشته مورد نظر و بولین برمیکرداند
-        name.contains("ali")
-
-
-
-
-        Log.i("TESTING","${name.endsWith("sajjadi")}")
     }
 
 }
