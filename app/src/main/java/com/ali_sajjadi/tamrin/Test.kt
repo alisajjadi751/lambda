@@ -1,7 +1,6 @@
 package com.ali_sajjadi.tamrin
 
 import android.util.Log
-import java.text.DecimalFormat
 
 class Test private constructor(){
 
@@ -16,10 +15,40 @@ class Test private constructor(){
 
     fun showLog(){
 
-        val price = 1000000000L
-        val df = DecimalFormat("0,000")
+        val name = "ali sajjadi"
 
-        Log.i("TESTING","${df.format(price)} ")
+        //برگرداندن یک حرف
+        name[3]
+
+        //یرگردادن طول نوشته
+        name.length
+
+        //برگردادن اولین و اخرین حرف
+        name.first()
+        name.last()
+
+        //حذف فاصله انتها و ابتدا که بیشتر برای دریافت پسورد به کار میرود
+        name.trim()
+        name.trimStart()
+        name.trimEnd()
+
+        //برعکس کردن رشته
+        val test = name.reversed()
+
+        //بررسی ابتدا . انتهای رشته و بولین برمیگرداند
+        name.startsWith("ali")
+        name.endsWith("sajjadi")
+
+        //چای گذاری
+        val test2 = name.replace('a','*')
+
+        //چک کردن وجود یک رشته در رشته مورد نظر و بولین برمیکرداند
+        name.contains("ali")
+
+
+
+
+        Log.i("TESTING","${name.endsWith("sajjadi")}")
     }
 
 }
