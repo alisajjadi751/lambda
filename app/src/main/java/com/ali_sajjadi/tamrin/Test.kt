@@ -13,20 +13,23 @@ class Test private constructor() {
 
     }
 
+
     fun showLog() {
 
-        val address = "test test2 test3 test4"
+        showText(10, 30)
 
-        Log.i("TESTING", "")
-        address getWords "Ali"
+
     }
 
-    //اگر extension fun  داشته باشیم میتوان ان را به صورت infix fun تعریف کرد
-    //فانکشنی که به صورت infix fun باشد حتما باید دارای فقط یک ورودی باشد
-    private infix fun String.getWords(name: String): Int {
-
-        return this.split(' ').size
-
+    //lambda
+    //در لامبدا میتوان بعد ار دستوذات از کلاس هم استفاده کرد و متغیر کلاس را برمیگرداند
+    private val showText = { num1: Int, num2: Int ->
+        Log.i("TESTING", "test1")
+        Log.i("TESTING", "test2")
+        Log.i("TESTING", "test3")
+        Log.i("TESTING", "test4")
+        (num1 + num2) / 2
+        Person()
     }
 
 }
